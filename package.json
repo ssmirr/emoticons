@@ -1,0 +1,16 @@
+{
+  "name": "emoticons",
+  "version": "1.0.0",
+  "description": "Generate random emoticons based on emotions",
+  "main": "index.js",
+  "bin": {
+    "emoticon": "./cli.js"
+  },
+  "scripts": {
+    "demo": "node demo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["emoticon", "kaomoji", "emoji", "emotion", "text-face"],
+  "author": "Samim (https://github.com/ssmirr)",
+  "license": "MIT"
+}
