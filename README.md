@@ -61,19 +61,23 @@ emoticon.emotions;
 
 ## Emotions & Examples
 
-| Emotion | Examples |
-|:---|:---|
-| **happy** | `ヽ(＾◡＾)ﾉ`  `╰(⌣‿⌣)╯`  `੧(☆∀☆)੭` |
-| **sad** | `(ಥ︿ಥ)`  `╰(；﹏；)╯`  `༼╥‸╥༽` |
-| **angry** | `ᕙ(ಠ益ಠ)ᕗ`  `ᕦ(╬皿╬)ᕤ`  `╚(•́Д•́)═╝` |
-| **love** | `(♥◡♥)`  `ヽ(✿˘ε˘✿)ﾉ`  `╰(❤ω❤)╯` |
-| **surprised** | `╰(⊙□⊙)╯`  `ヽ(°O°)ﾉ`  `༼ʘдʘ༽` |
-| **confused** | `¯\_(・〰・)_/¯`  `┌(◔‸◔)┐`  `乁(？〜？)ㄏ` |
-| **excited** | `੧(✧○✧)੭`  `٩(☆ω☆)و`  `୧(＾∀＾)୨` |
-| **cool** | `ᕙ(▀‿▀)ᕗ`  `(¬ʖ¬)`  `ᕦ(⌣_⌣)ᕤ` |
-| **silly** | `乁ʕ◉ε◉ʔㄏ`  `╰༼¬〰¬༽╯`  `ヽ(ↂਊↂ)ﾉ` |
-| **shrug** | `¯\_(ツ)_/¯`  `¯\_(◉‿◉)_/¯`  `¯\_(シ)_/¯` |
-| **disapproval** | `(ಠ_ಠ)`  `[≖╭╮≖]`  `(¬益¬)` |
+| Emotion | Unique Variants | Examples |
+|:---|---:|:---|
+| **happy** | 756 | `ヽ(＾◡＾)ﾉ`  `╰(⌣‿⌣)╯`  `੧(☆∀☆)੭` |
+| **sad** | 150 | `(ಥ︿ಥ)`  `╰(；﹏；)╯`  `༼╥‸╥༽` |
+| **angry** | 300 | `ᕙ(ಠ益ಠ)ᕗ`  `ᕦ(╬皿╬)ᕤ`  `╚(•́Д•́)═╝` |
+| **love** | 480 | `(♥◡♥)`  `ヽ(✿˘ε˘✿)ﾉ`  `╰(❤ω❤)╯` |
+| **surprised** | 150 | `╰(⊙□⊙)╯`  `ヽ(°O°)ﾉ`  `༼ʘдʘ༽` |
+| **confused** | 240 | `¯\_(・〰・)_/¯`  `┌(◔‸◔)┐`  `乁(？〜？)ㄏ` |
+| **excited** | 540 | `੧(✧○✧)੭`  `٩(☆ω☆)و`  `୧(＾∀＾)୨` |
+| **cool** | 200 | `ᕙ(▀‿▀)ᕗ`  `(¬ʖ¬)`  `ᕦ(⌣_⌣)ᕤ` |
+| **silly** | 324 | `乁ʕ◉ε◉ʔㄏ`  `╰༼¬〰¬༽╯`  `ヽ(ↂਊↂ)ﾉ` |
+| **shrug** | 8 | `¯\_(ツ)_/¯`  `¯\_(◉‿◉)_/¯`  `¯\_(シ)_/¯` |
+| **disapproval** | 24 | `(ಠ_ಠ)`  `[≖╭╮≖]`  `(¬益¬)` |
+
+> Counts are calculated by enumerating every valid arm, body, eye, mouth, and optional cheek combination for each emotion. The per-emotion numbers are unique within that emotion; across the whole package, some strings overlap between emotions.
+
+`3172` total combinations across all emotions. `2893` of those are unique emoticon strings after removing overlaps between emotions.
 
 ---
 
