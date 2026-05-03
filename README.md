@@ -69,15 +69,20 @@ emoticon.emotions;
 | **love** | 480 | `(♥◡♥)`  `ヽ(✿˘ε˘✿)ﾉ`  `╰(❤ω❤)╯` |
 | **surprised** | 150 | `╰(⊙□⊙)╯`  `ヽ(°O°)ﾉ`  `༼ʘдʘ༽` |
 | **confused** | 240 | `¯\_(・〰・)_/¯`  `┌(◔‸◔)┐`  `乁(？〜？)ㄏ` |
-| **excited** | 540 | `੧(✧○✧)੭`  `٩(☆ω☆)و`  `୧(＾∀＾)୨` |
+| **excited** | 360 | `੧(✧○✧)੭`  `٩(☆ω☆)و`  `୧(°∀°)୨` |
 | **cool** | 200 | `ᕙ(▀‿▀)ᕗ`  `(¬ʖ¬)`  `ᕦ(⌣_⌣)ᕤ` |
 | **silly** | 324 | `乁ʕ◉ε◉ʔㄏ`  `╰༼¬〰¬༽╯`  `ヽ(ↂਊↂ)ﾉ` |
 | **shrug** | 8 | `¯\_(ツ)_/¯`  `¯\_(◉‿◉)_/¯`  `¯\_(シ)_/¯` |
 | **disapproval** | 24 | `(ಠ_ಠ)`  `[≖╭╮≖]`  `(¬益¬)` |
+| **laughing** | 240 | `ᕙ(^ロ^)ᕗ`  `(＾▽＾)`  `ヽ(థѠథ)ﾉ` |
+| **embarrassed** | 750 | `(･∼･)`  `╰(✿﹏ε﹏✿)╯`  `ヽ(。﹁ε﹁。)ﾉ` |
+| **tired** | 150 | `(⌣３⌣)`  `乁(˘ロ˘)ㄏ`  `╰༼ˍεˍ༽╯` |
+| **scared** | 200 | `ヽ(⊙口⊙)ﾉ`  `⋋(◉‸◉)⋌`  `╰༼☉﹏☉༽╯` |
+| **crying** | 1125 | `(T﹏T)`  `(Q口Q)`  `༼；ㅠ；༽` |
 
 > Counts are calculated by enumerating every valid arm, body, eye, mouth, and optional cheek combination for each emotion. The per-emotion numbers are unique within that emotion; across the whole package, some strings overlap between emotions.
 
-`3172` total combinations across all emotions. `2893` of those are unique emoticon strings after removing overlaps between emotions.
+`5457` total combinations across all emotions. `5243` of those are unique emoticon strings after removing overlaps between emotions.
 
 ---
 
