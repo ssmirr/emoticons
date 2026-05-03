@@ -16,8 +16,9 @@
   },
   "scripts": {
     "demo": "node demo.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test"
   },
+  "files": ["index.js", "index.mjs", "index.d.ts", "emotions.js", "cli.js", "LICENSE", "README.md"],
   "keywords": ["emoticon", "kaomoji", "emoji", "emotion", "text-face"],
   "author": "Samim (https://github.com/ssmirr)",
   "license": "MIT"

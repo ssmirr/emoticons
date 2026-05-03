@@ -3,4 +3,5 @@ declare namespace emoticon {
   function random(): string;
   const emotions: string[];
 }
-export = emoticon;
+export default emoticon;
+export { random, emotions };

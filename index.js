@@ -17,7 +17,7 @@ const emotions = require('./emotions');
  */
 function emoticon(emotion, intensity) {
   if (typeof emotion !== 'string') {
-    throw new TypeError('Emotion must be a string');
+    throw new TypeError(`Emotion must be a string, got ${typeof emotion}`);
   }
 
   emotion = emotion.toLowerCase().trim();
@@ -30,7 +30,7 @@ function emoticon(emotion, intensity) {
   }
 
   // Intensity defaults to 0.5 (uniform)
-  const t = intensity !== undefined ? Math.max(0, Math.min(1, +intensity)) : 0.5;
+  const t = intensity !== undefined && Number.isFinite(+intensity) ? Math.max(0, Math.min(1, +intensity)) : 0.5;
 
   // Pre-composed emoticons (e.g. shrug) — intensity N/A
   if (config.preComposed) {
