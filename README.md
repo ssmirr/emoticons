@@ -150,6 +150,16 @@ Arms and bodies are always picked as **matched pairs** so left and right stay vi
 
 ---
 
+## Web Playground
+
+Try it live: **[ssmirr.github.io/emoticons](https://ssmirr.github.io/emoticons)** 🎮
+
+Click any emotion, tweak the intensity slider, copy to clipboard. Run `npm run build:web` to regenerate `dist/emoticon.js`.
+
+> **Setup**: GitHub Pages → branch `main`, root folder (`/`).
+
+---
+
 ## License
 
 [MIT](LICENSE) © [Samim](https://github.com/ssmirr) ᕙ(▀‿▀)ᕗ

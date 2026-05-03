@@ -16,10 +16,28 @@
   },
   "scripts": {
     "demo": "node demo.js",
-    "test": "node --test"
+    "test": "node --test",
+    "build:web": "esbuild index.js --bundle --outfile=dist/emoticon.js --format=iife --minify --global-name=emoticon"
   },
-  "files": ["index.js", "index.mjs", "index.d.ts", "emotions.js", "cli.js", "LICENSE", "README.md"],
-  "keywords": ["emoticon", "kaomoji", "emoji", "emotion", "text-face"],
+  "files": [
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "emotions.js",
+    "cli.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "emoticon",
+    "kaomoji",
+    "emoji",
+    "emotion",
+    "text-face"
+  ],
   "author": "Samim (https://github.com/ssmirr)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
 }

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>emoticons ヽ(＾◡＾)ﾉ</title>
+<style>
+:root{--bg:#1a1a2e;--fg:#e0e0e0;--card:#16162a;--btn:#22223a;--btn-border:#33335a;--btn-fg:#b0b0d0;--btn-hover:#2e2e52;--btn-hover-border:#5555aa;--btn-active:#3a2a5a;--btn-active-border:#f0c;--accent:#f0c;--muted:#666;--heading:#888;--snippet-bg:#1e1e38;--kw:#ff79c6;--fn:#50fa7b;--str:#f1fa8c;--num:#bd93f9;--op:#ff79c6}
+@media(prefers-color-scheme:light){
+  :root{--bg:#f5f0fa;--fg:#2d2444;--card:#fff;--btn:#ece6f5;--btn-border:#d5cce6;--btn-fg:#4a3a6a;--btn-hover:#e0d6f2;--btn-hover-border:#b0a0cc;--btn-active:#f0e0ff;--btn-active-border:#c490e0;--accent:#a050d0;--muted:#9888b0;--heading:#7a6a90;--snippet-bg:#ede8f5}
+}
+:root[data-theme=light]{--bg:#f5f0fa;--fg:#2d2444;--card:#fff;--btn:#ece6f5;--btn-border:#d5cce6;--btn-fg:#4a3a6a;--btn-hover:#e0d6f2;--btn-hover-border:#b0a0cc;--btn-active:#f0e0ff;--btn-active-border:#c490e0;--accent:#a050d0;--muted:#9888b0;--heading:#7a6a90;--snippet-bg:#ede8f5;--kw:#a626a4;--fn:#4078f2;--str:#986801;--num:#986801;--op:#a626a4}
+:root[data-theme=dark]{--bg:#1a1a2e;--fg:#e0e0e0;--card:#16162a;--btn:#22223a;--btn-border:#33335a;--btn-fg:#b0b0d0;--btn-hover:#2e2e52;--btn-hover-border:#5555aa;--btn-active:#3a2a5a;--btn-active-border:#f0c;--accent:#f0c;--muted:#666;--heading:#888;--snippet-bg:#1e1e38}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1rem;transition:background .25s,color .25s}
+.container{max-width:640px;width:100%;text-align:center}
+.header{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:2rem}
+.header h1{font-size:1.3rem;font-weight:400;color:var(--heading);letter-spacing:.02em}
+.header h1 span{color:var(--accent)}
+.theme-btn{position:fixed;bottom:1rem;right:1rem;background:var(--btn);border:1px solid var(--btn-border);color:var(--muted);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:.1s;padding:0;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+.emoticon{font-size:3.5rem;line-height:1.4;padding:2rem 1rem 1.2rem;margin:1rem 0 .5rem;background:var(--card);border-radius:16px 16px 0 0;min-height:7rem;display:flex;align-items:center;justify-content:center;word-break:keep-all;transition:opacity .12s,background .25s}
+.emoticon.fade{opacity:0}
+.snippet{font-size:.78rem;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;background:var(--snippet-bg);border-radius:0 0 16px 16px;padding:.6rem 1rem 1rem;margin-bottom:1.5rem;color:var(--fg);transition:background .25s;display:inline-block;text-align:left}
+.snippet .kw{color:var(--kw)}
+.snippet .fn{color:var(--fn)}
+.snippet .str{color:var(--str)}
+.snippet .num{color:var(--num)}
+.snippet .op{color:var(--op)}
+.emotion-label{font-size:.8rem;color:var(--muted);margin-top:0;margin-bottom:1.5rem}
+.buttons{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:1.5rem}
+.btn{background:var(--btn);border:1px solid var(--btn-border);color:var(--btn-fg);padding:.4rem .9rem;border-radius:8px;cursor:pointer;font-size:.82rem;transition:.1s}
+.btn:hover{background:var(--btn-hover);border-color:var(--btn-hover-border);color:var(--fg)}
+.btn.active{background:var(--btn-active);border-color:var(--btn-active-border);color:var(--accent)}
+.btn-random{background:var(--btn-active);border-color:var(--accent);color:var(--accent)}
+.btn-random:hover{background:var(--btn-hover);border-color:var(--accent)}
+.controls{display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:.5rem}
+.ctrl-group{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--muted)}
+.ctrl-group input[type=range]{width:80px;accent-color:var(--accent)}
+.copy-msg{font-size:.75rem;color:var(--accent);height:1.2rem;margin-top:.5rem}
+.footer{margin-top:2rem;display:flex;justify-content:center;align-items:center;gap:6px;font-size:.75rem;color:var(--muted)}
+.footer a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:4px;transition:color .15s}
+.footer a:hover{color:var(--accent)}
+.footer svg{width:14px;height:14px;fill:currentColor}
+</style>
+<script src=dist/emoticon.js></script>
+<div class=container>
+<div class=header>
+  
+</div>
+<div class=emoticon id=display></div>
+<div class=snippet id=snippet></div>
+<div class=emotion-label id=label>happy</div>
+<div class=buttons id=buttons></div>
+<div class=controls>
+  <div class=ctrl-group>
+    <label for=intensity>intensity</label>
+    <input type=range id=intensity min=0 max=1 step=.05 value=.5>
+    <span id=intVal>0.5</span>
+  </div>
+  <button class="btn btn-random" id=randomBtn>🎲 random</button>
+  <button class=btn id=copyBtn>📋 copy</button>
+</div>
+<div class=copy-msg id=copyMsg></div>
+<div class=footer>
+  <a href=https://github.com/ssmirr/emoticons target=_blank rel=noopener>
+    Made for fun by Samim ヽ(＾◡＾)ﾉ
+  </a>
+</div>
+</div>
+<button class=theme-btn id=themeBtn aria-label="Toggle theme">🌙</button>
+<script>
+const $=s=>document.querySelector(s);
+const display=$('#display'),label=$('#label'),snippet=$('#snippet'),buttons=$('#buttons'),intensity=$('#intensity'),intVal=$('#intVal'),copyMsg=$('#copyMsg'),themeBtn=$('#themeBtn');
+let current='happy';
+
+function fmt(val){return Number.isInteger(val)?val:val.toFixed(2)}
+function render(){
+  display.classList.add('fade');
+  setTimeout(()=>{
+    const t=+intensity.value;
+    display.textContent=emoticon(current,t);
+    snippet.innerHTML=`<span class=kw>const</span> <span class=fn>emoticon</span> <span class=op>=</span> <span class=kw>require</span>(<span class=str>'emoticons'</span>)<br><span class=kw>console</span>.<span class=fn>log</span>(<span class=fn>emoticon</span>(<span class=str>'${current}'</span><span class=op>,</span> <span class=num>${fmt(t)}</span>)<span class=op>)</span>`;
+    label.textContent=current;
+    display.classList.remove('fade');
+  },120);
+}
+function setEmotion(e){current=e;buttons.querySelectorAll('.btn').forEach(b=>b.classList.toggle('active',b.dataset.emotion===e));render()}
+
+emoticon.emotions.forEach(e=>{
+  const b=document.createElement('button');
+  b.className='btn'+(e==='happy'?' active':'');b.dataset.emotion=e;b.textContent=e;
+  b.onclick=()=>setEmotion(e);buttons.appendChild(b);
+});
+$('#randomBtn').onclick=()=>{current=emoticon.emotions[Math.floor(Math.random()*emoticon.emotions.length)];buttons.querySelectorAll('.btn').forEach(b=>b.classList.toggle('active',b.dataset.emotion===current));render()};
+$('#copyBtn').onclick=async()=>{try{await navigator.clipboard.writeText(display.textContent);copyMsg.textContent='copied!'}catch{copyMsg.textContent='copy failed'}setTimeout(()=>{copyMsg.textContent=''},1500)};
+intensity.oninput=()=>{intVal.textContent=intensity.value;render()};
+
+const stored=localStorage.getItem('theme');
+const sys=matchMedia('(prefers-color-scheme:light)').matches?'light':'dark';
+const theme=stored||sys;
+document.documentElement.setAttribute('data-theme',theme);
+themeBtn.textContent=theme==='light'?'🌙':'☀️';
+matchMedia('(prefers-color-scheme:light)').addEventListener('change',e=>{if(!localStorage.getItem('theme'))update(e.matches?'light':'dark')});
+themeBtn.onclick=()=>{const t=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';localStorage.setItem('theme',t);update(t)};
+function update(t){document.documentElement.setAttribute('data-theme',t);themeBtn.textContent=t==='light'?'🌙':'☀️'}
+
+render();
+</script>
+</html>

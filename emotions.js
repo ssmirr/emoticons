@@ -1,6 +1,7 @@
 'use strict';
 
-module.exports = {
+(function() {
+const emotions = {
   happy: {
     arms: [['╰','╯'],['ヽ','ﾉ'],['੧','੭'],['୧','୨'],['٩','و'],['','']],
     bodies: [['(',')'],['[',']'],['༼','༽']],
@@ -122,3 +123,10 @@ module.exports = {
     cheeks: [';','；','°','。'],
   },
 };
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = emotions;
+} else if (typeof window !== 'undefined') {
+  window.EMOTIONS = emotions;
+}
+})();

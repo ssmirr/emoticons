@@ -1,6 +1,7 @@
 'use strict';
 
-const emotions = require('./emotions');
+(function() {
+const emotions = typeof module !== 'undefined' && module.exports ? require('./emotions') : window.EMOTIONS;
 
 /**
  * Generate a random emoticon for the given emotion.
@@ -93,4 +94,9 @@ function biasedPick(arr, t) {
   return arr[Math.min(idx, arr.length - 1)];
 }
 
-module.exports = emoticon;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = emoticon;
+} else if (typeof window !== 'undefined') {
+  window.emoticon = emoticon;
+}
+})();
