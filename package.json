@@ -17,7 +17,8 @@
   "scripts": {
     "demo": "node demo.js",
     "test": "node --test",
-    "build:web": "esbuild index.js --bundle --outfile=dist/emoticon.js --format=iife --minify --global-name=emoticon"
+    "build:web": "esbuild index.js --bundle --outfile=dist/emoticon.js --format=iife --minify --global-name=emoticon",
+    "playground": "npx serve ."
   },
   "files": [
     "index.js",
