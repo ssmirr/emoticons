@@ -54,8 +54,24 @@ emoticon.random();    // ¯\_(ツ)_/¯  (who knows what you'll get)
 ```js
 emoticon.emotions;
 // ['happy', 'sad', 'angry', 'love', 'surprised',
-//  'confused', 'excited', 'cool', 'silly', 'shrug', 'disapproval']
+//  'confused', 'excited', 'cool', 'silly', 'shrug',
+//  'disapproval', 'laughing', 'embarrassed', 'tired',
+//  'scared', 'crying']
 ```
+
+### Intensity
+
+Control how mild or intense the emoticon feels:
+
+```js
+emoticon('angry', 0.2);   // mild — (•́_•́)
+emoticon('angry', 0.8);   // intense — ᕙ(╬Д╬)ᕗ
+emoticon('angry', 0);     // mildest possible
+emoticon('angry', 1);     // most intense possible
+emoticon('angry');        // uniform random (default)
+```
+
+Parts arrays are ordered mild→intense per emotion so the bias is meaningful. Works best on emotions with clear polarity (angry, scared, excited, sad, love, laughing, crying, happy, tired, surprised, embarrassed). shrug and pre-composed emotions ignore intensity.
 
 ---
 
