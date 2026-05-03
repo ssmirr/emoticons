@@ -152,10 +152,10 @@ Arms and bodies are always picked as **matched pairs** so left and right stay vi
 
 ## Browser Usage
 
-Include the minified bundle in any web page:
+Include the minified bundle in any web page (no npm install needed):
 
 ```html
-<script src="dist/emoticon.js"></script>
+<script src="https://github.com/ssmirr/emoticons/raw/refs/heads/master/dist/emoticon.js"></script>
 <script>
   console.log(emoticon('happy'));       // ヽ(＾◡＾)ﾉ
   console.log(emoticon('sad', 0.8));    // intense sadness
@@ -163,7 +163,7 @@ Include the minified bundle in any web page:
 </script>
 ```
 
-Run `npm run build:web` to regenerate `dist/emoticon.js` after editing the source.
+Or use the local copy: `npm run build:web` to regenerate `dist/emoticon.js` after editing the source.
 
 ## Web Playground
 
