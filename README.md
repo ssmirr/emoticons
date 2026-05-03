@@ -150,11 +150,26 @@ Arms and bodies are always picked as **matched pairs** so left and right stay vi
 
 ---
 
+## Browser Usage
+
+Include the minified bundle in any web page:
+
+```html
+<script src="dist/emoticon.js"></script>
+<script>
+  console.log(emoticon('happy'));       // ヽ(＾◡＾)ﾉ
+  console.log(emoticon('sad', 0.8));    // intense sadness
+  console.log(emoticon.random());       // who knows
+</script>
+```
+
+Run `npm run build:web` to regenerate `dist/emoticon.js` after editing the source.
+
 ## Web Playground
 
 Try it live: **[ssmirr.github.io/emoticons](https://ssmirr.github.io/emoticons)** 🎮
 
-Click any emotion, tweak the intensity slider, copy to clipboard. Run `npm run build:web` to regenerate `dist/emoticon.js`.
+Click any emotion, tweak the intensity slider, copy to clipboard.
 
 > **Setup**: GitHub Pages → branch `master`, root folder (`/`).
 
